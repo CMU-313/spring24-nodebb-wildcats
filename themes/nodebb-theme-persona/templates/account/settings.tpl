@@ -88,6 +88,23 @@
                 </div>
             </div>
 
+            <!-- IF instructor_only -->
+            <h4>[[global:instructor_only]]</h4>
+            <div class="well">
+                <div class="form-group">
+                    if userData['account-type'] == 'instructor'|| userData['account-type'] == 'administrator'{
+                        <label for="instructor_only">[[user:Instructor Only]]</label>
+                        <select class="form-control" id="instructor_only" data-property="instructor_only" autocomplete="off">
+                            {{{each instructor_only}}}
+                            {{{end}}}
+                        </select>
+                        <p class="help-block">[[user:instructor_only]]</p>
+                    }
+                </div>
+            </div>
+            <!-- ENDIF instructor_only -->
+
+
             <h4>[[global:pagination]]</h4>
             <div class="well">
                 <div class="checkbox">
