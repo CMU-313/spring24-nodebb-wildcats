@@ -151,5 +151,7 @@
 	"disabled": "Disabled",
 	"select": "Select",
 
-	"user-search-prompt": "Type something here to find users..."
+	"user-search-prompt": "Type something here to find users...",
+
+	"instructor_only": "Instructor Only"
 }

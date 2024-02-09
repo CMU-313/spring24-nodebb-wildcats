@@ -79,5 +79,5 @@
     "thumbs.modal.add": "Add thumbnail",
     "thumbs.modal.remove": "Remove thumbnail",
     "thumbs.modal.confirm-remove": "Are you sure you want to remove this thumbnail?",
-    "instructor.only": "This enables the instructor only function"
+    "instructor_only": "This enables the instructor only function"
 }
