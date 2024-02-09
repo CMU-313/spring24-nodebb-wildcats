@@ -88,7 +88,7 @@
                 </div>
             </div>
 
-            
+            <!-- IF isAdminOrGlobalModeratorOrModerator -->
             <h4>[[global:instructor_only]]</h4>
             <div class="well">
                 <div class="checkbox">
@@ -97,7 +97,7 @@
                         </label>
                 </div>
             </div>
-
+            <!-- ENDIF isAdminOrGlobalModeratorOrModerator -->
 
             <h4>[[global:pagination]]</h4>
             <div class="well">
