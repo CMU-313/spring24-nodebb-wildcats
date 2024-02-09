@@ -102,6 +102,19 @@ module.exports = function (Topics) {
             throw new Error('[[error:no-category]]');
         }
 
+        // Check if the user is student and post is announcement
+        // TODO: Add forum setting, etc., such that this can be toggled
+        let instructorOnlyAnnouncement = true;
+        if (instructorOnlyAnnouncement) {
+            const userType = await user.getUserField(uid, 'accounttype');
+            const categoryData = await categories.getCategoryData(data.cid);
+            if (userType === 'student' && categoryData.name === 'Announcements') {
+                // TODO(frontend): make a different error message for ban student from posting announcement
+                throw new Error('[[error:no-privileges]]');
+            }    
+        }
+
+
         if (!canCreate || (!canTag && data.tags.length)) {
             throw new Error('[[error:no-privileges]]');
         }
