@@ -55,6 +55,9 @@ Settings:
     scrollToMyPost:
       type: boolean
       description: Automatically center the viewport to you new post after posting
+    enableInstructorOnly:
+      type: boolean
+      description: Only Instructors are able to post announcements
     notificationType_new-chat:
       type: string
       description: Notification type for new chat messages
@@ -134,6 +137,7 @@ Settings:
     - bootswatchSkin
     - homePageRoute
     - scrollToMyPost
+    - enableInstructorOnly
     - notificationType_new-chat
     - notificationType_new-reply
     - notificationType_upvote
