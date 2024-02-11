@@ -114,11 +114,6 @@ module.exports = function (Topics) {
             }    
         }
 
-
-        if (!canCreate || (!canTag && data.tags.length)) {
-            throw new Error('[[error:no-privileges]]');
-        }
-
         await guestHandleValid(data);
         if (!data.fromQueue) {
             await user.isReadyToPost(uid, data.cid);

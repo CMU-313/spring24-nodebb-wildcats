@@ -88,16 +88,16 @@
                 </div>
             </div>
 
-            <!-- IF isAdminOrGlobalModeratorOrModerator -->
+            <!-- IF isInstructor -->
             <h4>[[global:instructor_only]]</h4>
             <div class="well">
                 <div class="checkbox">
                         <label>
-                            <input type="checkbox" data-property="enableInstructorOnly" <!-- IF settings.enableInstructorOnly -->checked<!-- ENDIF settings.enableInstructorOnly -->\\\> <strong>[[user:instructor_only]]</strong>
+                            <input type="checkbox" data-property="enableInstructorOnly" <!-- IF settings.enableInstructorOnly -->checked<!-- ENDIF settings.enableInstructorOnly -->/> <strong>[[user:instructor_only]]</strong>
                         </label>
                 </div>
             </div>
-            <!-- ENDIF isAdminOrGlobalModeratorOrModerator -->
+            <!-- ENDIF isInstructor -->
 
             <h4>[[global:pagination]]</h4>
             <div class="well">
