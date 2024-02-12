@@ -48,13 +48,13 @@
                     <tr>
                         <th align="left">
                             <a href="https://github.com/CMU-313/spring24-nodebb-wildcats/pulls?q=author%3AFireACNC+type%3Apr+created%3A2024-01-20T00:00:00-05:00..2024-03-29T23:59:00-05:00">
-                            PRs: 0
+                            PRs: 1
                             </a>
                         </th>
                     <tr>
                     <tr>
                         <th align="left">
-                            Comments: 0
+                            Comments: 1
                         </th>
                     <tr>
                 </table>
