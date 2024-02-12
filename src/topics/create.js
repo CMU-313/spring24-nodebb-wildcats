@@ -109,8 +109,7 @@ module.exports = function (Topics) {
             const userType = await user.getUserField(uid, 'accounttype');
             const categoryData = await categories.getCategoryData(data.cid);
             if (userType === 'student' && categoryData.name === 'Announcements') {
-                // TODO(frontend): make a different error message for ban student from posting announcement
-                throw new Error('[[error:no-privileges]]');
+                throw new Error('[[error:instructor-only]]');
             }    
         }
 
