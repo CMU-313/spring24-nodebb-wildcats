@@ -265,6 +265,10 @@ postsAPI.unvote = async function (caller, data) {
     return await apiHelpers.postCommand(caller, 'unvote', 'voted', '', data);
 };
 
+postsAPI.anonymous = async function (caller, data) {
+    return await apiHelpers.postCommand(caller, 'anonymous', 'anonymized', '', data);
+};
+
 postsAPI.bookmark = async function (caller, data) {
     return await apiHelpers.postCommand(caller, 'bookmark', 'bookmarked', '', data);
 };
