@@ -94,7 +94,8 @@ topicsController.get = async function getTopic(req, res, next) {
     topicData.postEditDuration = meta.config.postEditDuration;
     topicData.postDeleteDuration = meta.config.postDeleteDuration;
     topicData.scrollToMyPost = settings.scrollToMyPost;
-    topicData.enableInstructorOnly = settings.enableInstructorOnly; // TODO: check for the category itself and see its setting
+    // TODO: check for the category itself and see its setting
+    topicData.enableInstructorOnly = settings.enableInstructorOnly;
     topicData.updateUrlWithPostIndex = settings.updateUrlWithPostIndex;
     topicData.allowMultipleBadges = meta.config.allowMultipleBadges === 1;
     topicData.privateUploads = meta.config.privateUploads === 1;

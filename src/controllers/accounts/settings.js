@@ -48,7 +48,7 @@ settingsController.get = async function (req, res, next) {
     userData.homePageRoutes = routes;
     userData.notificationSettings = notificationSettings;
     userData.disableEmailSubscriptions = meta.config.disableEmailSubscriptions;
-    userData.isInstructor = userData.accounttype == 'instructor';
+    userData.isInstructor = userData.accounttype === 'instructor';
 
     userData.dailyDigestFreqOptions = [
         { value: 'off', name: '[[user:digest_off]]', selected: userData.settings.dailyDigestFreq === 'off' },

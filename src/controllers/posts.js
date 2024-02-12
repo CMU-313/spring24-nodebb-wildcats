@@ -13,7 +13,7 @@ postsController.redirectToPost = async function (req, res, next) {
     if (!pid) {
         return next();
     }
- 
+
     const [canRead, path] = await Promise.all([
         privileges.posts.can('topics:read', pid, req.uid),
         posts.generatePostPath(pid, req.uid),
