@@ -10,6 +10,7 @@ const plugins = require('../plugins');
 const groups = require('../groups');
 const meta = require('../meta');
 const analytics = require('../analytics');
+const categories = require('../categories');
 
 module.exports = function (User) {
     User.create = async function (data) {

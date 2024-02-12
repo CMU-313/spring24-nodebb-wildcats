@@ -23,6 +23,7 @@ export type CategoryObject = {
   totalPostCount: number;
   totalTopicCount: number;
   subCategoriesPerPage: number;
+  instructorOnly: boolean;
 };
 
 export type CategoryOptionalProperties = {
