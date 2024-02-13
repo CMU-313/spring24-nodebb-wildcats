@@ -4,7 +4,7 @@ const winston = require('winston');
 const validator = require('validator');
 const slugify = require('../slugify');
 
-const meta = require('../meta');
+// const meta = require('../meta');
 
 const helpers = module.exports;
 
