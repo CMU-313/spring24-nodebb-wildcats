@@ -15,19 +15,5 @@ get:
       description: "Canonical URL of topic"
       content:
         text/plain:
-          schema: 
-            type: object
-            properties:
-              pid:
-                type: string
-                description: 'The unique identifier of the post'
-              content:
-                type: string
-                description: 'The content of the post'
-              timestamp:
-                type: string
-                format: date-time
-                description: 'The timestamp when the post was created'
-              isAnonymous:
-                type: boolean   # Add the isAnonymous property
-            
+          schema:
+            type: string

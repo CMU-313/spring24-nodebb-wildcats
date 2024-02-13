@@ -19,7 +19,7 @@ module.exports = function (Posts) {
         const content = data.content.toString();
         const timestamp = data.timestamp || Date.now();
         const isMain = data.isMain || false;
-        const isAnonymous = data.isAnonymous || false;
+
         if (!uid && parseInt(uid, 10) !== 0) {
             throw new Error('[[error:invalid-uid]]');
         }
@@ -35,7 +35,6 @@ module.exports = function (Posts) {
             tid: tid,
             content: content,
             timestamp: timestamp,
-            isAnonymous: isAnonymous,
         };
 
         if (data.toPid) {
@@ -67,7 +66,6 @@ module.exports = function (Posts) {
         ]);
 
         result = await plugins.hooks.fire('filter:post.get', { post: postData, uid: data.uid });
-        result.post.isAnonymous = isAnonymous;
         result.post.isMain = isMain;
         plugins.hooks.fire('action:post.save', { post: _.clone(result.post) });
         return result.post;
