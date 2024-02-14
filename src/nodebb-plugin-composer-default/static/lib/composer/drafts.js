@@ -92,9 +92,8 @@ define('composer/drafts', ['api', 'alerts'], function (api, alerts) {
 			var storage = getStorage(app.user.uid);
 
 			if (postData.hasOwnProperty('cid') && !postData.save_id.endsWith(':cid:' + postData.cid)) {
-				// A new cid was selected, the save_id needs updating
-				drafts.removeDraft(postData.save_id);	// First, delete the old draft
-				postData.save_id = postData.save_id.replace(/cid:\d+$/, 'cid:' + postData.cid);	// then create a new save_id
+				drafts.removeDraft(postData.save_id);
+				postData.save_id = postData.save_id.replace(/cid:\d+$/, 'cid:' + postData.cid);
 			}
 
 			if (raw.length || (title && title.length)) {
@@ -102,7 +101,6 @@ define('composer/drafts', ['api', 'alerts'], function (api, alerts) {
 				storage.setItem(`${postData.save_id}:uuid`, postContainer.attr('data-uuid'));
 
 				if (postData.hasOwnProperty('cid')) {
-					// New topic only
 					const tags = postContainer.find('input.tags').val();
 					storage.setItem(postData.save_id + ':tags', tags);
 					storage.setItem(postData.save_id + ':title', title);
@@ -156,7 +154,7 @@ define('composer/drafts', ['api', 'alerts'], function (api, alerts) {
 			open.push(save_id);
 		} else if (!add && idx !== -1) {
 			open.splice(idx, 1);
-		}	// otherwise do nothing
+		}
 
 		localStorage.setItem('drafts:' + set, JSON.stringify(open));
 	};

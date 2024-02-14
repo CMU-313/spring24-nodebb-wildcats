@@ -25,9 +25,7 @@ define('composer/formatting', [
 
 				if (composerObj.action === 'topics.post' || (composerObj.action === 'posts.edit' && composerObj.isMain)) {
 					topicThumbs.modal.open({ id: uuid, pid: composerObj.pid }).then(() => {
-						postContainer.trigger('thumb.uploaded');	// toggle draft save
-
-						// Update client-side with count
+						postContainer.trigger('thumb.uploaded');
 						composer.updateThumbCount(uuid, postContainer);
 					});
 				}
@@ -81,7 +79,7 @@ define('composer/formatting', [
 	};
 
 	formatting.addButton = function (iconClass, onClick, title, name) {
-		name = name || iconClass.replace('fa fa-', '')
+		name = name || iconClass.replace('fa fa-', '');
 		formattingDispatchTable[name] = onClick;
 		buttons.push({
 			name,
