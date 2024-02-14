@@ -46,6 +46,8 @@ get:
                     type: number
                   deleterUid:
                     type: number
+                  isAnonymous:
+                    type: boolean
                   edited:
                     type: number
                   replies:
@@ -110,6 +112,8 @@ put:
                   - type: object
                     properties:
                       edited:
+                        type: boolean
+                      isAnonymous:
                         type: boolean
                       deleterUid:
                         type: number
