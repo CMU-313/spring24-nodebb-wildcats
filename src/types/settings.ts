@@ -17,6 +17,7 @@ export type SettingsObject = {
   bootswatchSkin: string;
   homePageRoute: string;
   scrollToMyPost: boolean;
+  enableInstructorOnly: boolean;
   'notificationType_new-chat': string;
   'notificationType_new-group-chat': string;
   'notificationType_new-reply': string;

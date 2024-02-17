@@ -93,6 +93,9 @@ get:
                         subCategoriesPerPage:
                           type: number
                           description: The number of subcategories to display on the categories and category page
+                        instructorOnly:
+                          type: boolean
+                          description: If the category is instructor only
                         moderators:
                           type: array
                           items:

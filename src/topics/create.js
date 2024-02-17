@@ -106,6 +106,17 @@ module.exports = function (Topics) {
             throw new Error('[[error:no-privileges]]');
         }
 
+        // Check if the user is student and post is announcement
+        // TODO: Add forum setting, etc., such that this can be toggled
+        const instructorOnlyAnnouncement = false;
+        if (instructorOnlyAnnouncement) {
+            const userType = await user.getUserField(uid, 'accounttype');
+            const categoryData = await categories.getCategoryData(data.cid);
+            if (userType === 'student' && categoryData.name === 'Announcements') {
+                throw new Error('[[error:instructor-only]]');
+            }
+        }
+
         await guestHandleValid(data);
         if (!data.fromQueue) {
             await user.isReadyToPost(uid, data.cid);

@@ -44,6 +44,7 @@ module.exports = function (Categories) {
             imageClass: 'cover',
             isSection: 0,
             subCategoriesPerPage: 10,
+            instructorOnly: false,
         };
 
         if (data.backgroundImage) {

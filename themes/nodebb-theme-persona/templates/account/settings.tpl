@@ -88,6 +88,17 @@
                 </div>
             </div>
 
+            <!-- IF isInstructor -->
+            <h4>[[global:instructor_only]]</h4>
+            <div class="well">
+                <div class="checkbox">
+                        <label>
+                            <input type="checkbox" data-property="enableInstructorOnly" <!-- IF settings.enableInstructorOnly -->checked<!-- ENDIF settings.enableInstructorOnly -->/> <strong>[[user:instructor_only]]</strong>
+                        </label>
+                </div>
+            </div>
+            <!-- ENDIF isInstructor -->
+
             <h4>[[global:pagination]]</h4>
             <div class="well">
                 <div class="checkbox">
@@ -106,7 +117,7 @@
                 <div class="form-group">
                     <label for="dailyDigestFreq">[[user:digest_label]]</label>
                     <select class="form-control" id="dailyDigestFreq" data-property="dailyDigestFreq" autocomplete="off">
-                        {{{each dailyDigestFreqOptions}}}
+                        {{{each dailyDigestFreqOptions}}}  
                         <option value="{dailyDigestFreqOptions.value}" <!-- IF dailyDigestFreqOptions.selected -->selected="1"<!-- ENDIF dailyDigestFreqOptions.selected -->>{dailyDigestFreqOptions.name}</option>
                         {{{end}}}
                     </select>

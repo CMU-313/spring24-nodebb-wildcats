@@ -70,6 +70,7 @@ module.exports = function (User) {
         settings.bootswatchSkin = validator.escape(String(settings.bootswatchSkin || ''));
         settings.homePageRoute = validator.escape(String(settings.homePageRoute || '')).replace(/&#x2F;/g, '/');
         settings.scrollToMyPost = parseInt(getSetting(settings, 'scrollToMyPost', 1), 10) === 1;
+        settings.enableInstructorOnly = parseInt(getSetting(settings, 'enableInstructorOnly', 1), 10) === 1;
         settings.categoryWatchState = getSetting(settings, 'categoryWatchState', 'notwatching');
 
         const notificationTypes = await notifications.getAllNotificationTypes();
@@ -136,6 +137,7 @@ module.exports = function (User) {
             updateUrlWithPostIndex: data.updateUrlWithPostIndex,
             homePageRoute: ((data.homePageRoute === 'custom' ? data.homePageCustom : data.homePageRoute) || '').replace(/^\//, ''),
             scrollToMyPost: data.scrollToMyPost,
+            enableInstructorOnly: data.enableInstructorOnly,
             upvoteNotifFreq: data.upvoteNotifFreq,
             bootswatchSkin: data.bootswatchSkin,
             categoryWatchState: data.categoryWatchState,

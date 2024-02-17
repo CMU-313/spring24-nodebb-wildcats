@@ -364,6 +364,8 @@ get:
                     type: number
                   scrollToMyPost:
                     type: boolean
+                  enableInstructorOnly:
+                    type: boolean
                   updateUrlWithPostIndex:
                     type: boolean
                   allowMultipleBadges:

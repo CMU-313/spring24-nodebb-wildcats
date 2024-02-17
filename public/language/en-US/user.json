@@ -112,7 +112,7 @@
     "has_no_blocks": "You have blocked no users.",
     "email_hidden": "Email Hidden",
     "hidden": "hidden",
-    "paginate_description": "Paginate topics and posts instead of using infinite scroll",
+    "paginate_description": "PAGINATE topics and posts instead of using infinite scroll",
     "topics_per_page": "Topics per Page",
     "posts_per_page": "Posts per Page",
     "max_items_per_page": "Maximum %1",
@@ -195,5 +195,6 @@
     "emailUpdate.optional": "<strong>This field is optional</strong>. You are not obligated to provide your email address, but without a validated email you will not be able to recover your account or login with your email.",
     "emailUpdate.required": "<strong>This field is required</strong>.",
     "emailUpdate.change-instructions": "A confirmation email will be sent to the entered email address with a unique link. Accessing that link will confirm your ownership of the email address and it will become active on your account. At any time, you are able to update your email on file from within your account page.",
-    "emailUpdate.password-challenge": "Please enter your password in order to verify account ownership."
+    "emailUpdate.password-challenge": "Please enter your password in order to verify account ownership.",
+    "instructor_only": "Only Instructors are able to post announcements"
 }
