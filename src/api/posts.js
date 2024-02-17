@@ -257,12 +257,17 @@ postsAPI.upvote = async function (caller, data) {
     return await apiHelpers.postCommand(caller, 'upvote', 'voted', 'notifications:upvoted_your_post_in', data);
 };
 
+
 postsAPI.downvote = async function (caller, data) {
     return await apiHelpers.postCommand(caller, 'downvote', 'voted', '', data);
 };
 
 postsAPI.unvote = async function (caller, data) {
     return await apiHelpers.postCommand(caller, 'unvote', 'voted', '', data);
+};
+
+postsAPI.anonymous = async function (caller, data) {
+    return await apiHelpers.postCommand(caller, 'anonymous', 'anonymized', '', data);
 };
 
 postsAPI.bookmark = async function (caller, data) {
