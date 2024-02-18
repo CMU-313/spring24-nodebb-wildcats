@@ -24,7 +24,16 @@ define('composer', [
 ], function (taskbar, translator, uploads, formatting, drafts, tags,
 	categoryList, preview, resize, autocomplete, scheduler, scrollStop,
 	topicThumbs, api, bootbox, alerts, hooks, messagesModule, search, screenfull) {
-	var composer = {
+	    
+		var isCheckboxChecked = false;
+
+		$(document).on('change', '.composer #anonymizeCheckbox', function () {
+			isCheckboxChecked = $(this).prop('checked');
+			// You can add your logic here based on whether the checkbox is checked or unchecked.
+			console.log('Checkbox is checked:', isCheckboxChecked);
+		});
+
+		var composer = {
 		active: undefined,
 		posts: {},
 		bsEnvironment: undefined,
@@ -681,6 +690,8 @@ define('composer', [
 				cid: categoryList.getSelectedCid(),
 				tags: tags.getTags(post_uuid),
 				timestamp: scheduler.getTimestamp(),
+				isCheckboxChecked: isCheckboxChecked ? undefined : app.user.uid, // Include UID only if checkbox is unchecked
+
 			};
 		} else if (action === 'posts.reply') {
 			route = `/topics/${postData.tid}`;
@@ -690,6 +701,7 @@ define('composer', [
 				handle: handleEl ? handleEl.val() : undefined,
 				content: bodyEl.val(),
 				toPid: postData.toPid,
+				isCheckboxChecked: isCheckboxChecked ? undefined : app.user.uid, // Include UID only if checkbox is unchecked
 			};
 		} else if (action === 'posts.edit') {
 			method = 'put';
@@ -703,6 +715,8 @@ define('composer', [
 				thumb: thumbEl.val() || '',
 				tags: tags.getTags(post_uuid),
 				timestamp: scheduler.getTimestamp(),
+				isCheckboxChecked: isCheckboxChecked ? undefined : app.user.uid, // Include UID only if checkbox is unchecked
+
 			};
 		}
 		var submitHookData = {

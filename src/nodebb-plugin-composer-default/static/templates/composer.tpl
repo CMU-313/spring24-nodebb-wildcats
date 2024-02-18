@@ -96,7 +96,7 @@
 
 		<div class="checkbox" data-property="anonymizeUser">
 					<label>
-						<input type="checkbox"> 
+						<input type="checkbox" id="anonymizeCheckbox"> 
 						<strong> Anonymize Your Post </strong>
 					</label>
 		</div> 
