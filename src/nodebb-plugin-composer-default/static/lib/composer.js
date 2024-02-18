@@ -24,16 +24,15 @@ define('composer', [
 ], function (taskbar, translator, uploads, formatting, drafts, tags,
 	categoryList, preview, resize, autocomplete, scheduler, scrollStop,
 	topicThumbs, api, bootbox, alerts, hooks, messagesModule, search, screenfull) {
-	    
-		var isCheckboxChecked = false;
+	var isCheckboxChecked = false;
 
-		$(document).on('change', '.composer #anonymizeCheckbox', function () {
-			isCheckboxChecked = $(this).prop('checked');
-			// You can add your logic here based on whether the checkbox is checked or unchecked.
-			console.log('Checkbox is checked:', isCheckboxChecked);
-		});
+	$(document).on('change', '.composer #anonymizeCheckbox', function () {
+		isCheckboxChecked = $(this).prop('checked');
+		// You can add your logic here based on whether the checkbox is checked or unchecked.
+		console.log('Checkbox is checked:', isCheckboxChecked);
+	});
 
-		var composer = {
+	var composer = {
 		active: undefined,
 		posts: {},
 		bsEnvironment: undefined,

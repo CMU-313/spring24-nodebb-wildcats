@@ -1,3 +1,6 @@
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>window.jQuery || document.write('<script src="/path/to/your/jquery.js"><\/script>')</script>
+
 <div component="composer" class="composer<!-- IF resizable --> resizable<!-- ENDIF resizable --><!-- IF !isTopicOrMain --> reply<!-- ENDIF !isTopicOrMain -->">
 
 	<div class="composer-container">
