@@ -8,6 +8,7 @@ const db = require('../database');
 const plugins = require('../plugins');
 const notifications = require('../notifications');
 const languages = require('../languages');
+const categories = require('../categories');
 
 module.exports = function (User) {
     User.getSettings = async function (uid) {
@@ -70,8 +71,17 @@ module.exports = function (User) {
         settings.bootswatchSkin = validator.escape(String(settings.bootswatchSkin || ''));
         settings.homePageRoute = validator.escape(String(settings.homePageRoute || '')).replace(/&#x2F;/g, '/');
         settings.scrollToMyPost = parseInt(getSetting(settings, 'scrollToMyPost', 1), 10) === 1;
-        settings.enableInstructorOnly = parseInt(getSetting(settings, 'enableInstructorOnly', 1), 10) === 1;
         settings.categoryWatchState = getSetting(settings, 'categoryWatchState', 'notwatching');
+
+        settings.enableInstructorOnly = false;
+        const cids = await categories.findCidsPublic('announcements');
+        for (const cid of cids) {
+            const categoryData = await categories.getCategoryData(cid);
+            if (categoryData.name === 'Announcements') {
+                settings.enableInstructorOnly = await categories.getCategoryField(cid, 'instructorOnly');
+                break;
+            }
+        }
 
         const notificationTypes = await notifications.getAllNotificationTypes();
         notificationTypes.forEach((notificationType) => {
@@ -144,6 +154,17 @@ module.exports = function (User) {
             categoryTopicSort: data.categoryTopicSort,
             topicPostSort: data.topicPostSort,
         };
+
+        // Update announcement settings
+        const cids = await categories.findCidsPublic('announcements');
+        for (const cid of cids) {
+            const categoryData = await categories.getCategoryData(cid);
+            if (categoryData.name === 'Announcements') {
+                await categories.setCategoryField(cid, 'instructorOnly', data.enableInstructorOnly === 1);
+                break;
+            }
+        }
+
         const notificationTypes = await notifications.getAllNotificationTypes();
         notificationTypes.forEach((notificationType) => {
             if (data[notificationType]) {
