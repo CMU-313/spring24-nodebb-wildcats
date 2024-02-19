@@ -75,7 +75,7 @@ module.exports = function (User) {
 
         settings.enableInstructorOnly = false;
         const cids = await categories.findCidsPublic('announcements');
-        const promises = cids.map(async cid => {
+        const promises = cids.map(async (cid) => {
             const categoryData = await categories.getCategoryData(cid);
             if (categoryData.name === 'Announcements') {
                 settings.enableInstructorOnly = await categories.getCategoryField(cid, 'instructorOnly');
@@ -158,7 +158,7 @@ module.exports = function (User) {
 
         // Update announcement settings
         const cids = await categories.findCidsPublic('announcements');
-        const promises = cids.map(async cid => {
+        const promises = cids.map(async (cid) => {
             const categoryData = await categories.getCategoryData(cid);
             if (categoryData.name === 'Announcements') {
                 await categories.setCategoryField(cid, 'instructorOnly', data.enableInstructorOnly === 1);
