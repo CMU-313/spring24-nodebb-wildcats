@@ -75,13 +75,14 @@ module.exports = function (User) {
 
         settings.enableInstructorOnly = false;
         const cids = await categories.findCidsPublic('announcements');
-        for (const cid of cids) {
+        const promises = cids.map(async cid => {
             const categoryData = await categories.getCategoryData(cid);
             if (categoryData.name === 'Announcements') {
                 settings.enableInstructorOnly = await categories.getCategoryField(cid, 'instructorOnly');
-                break;
             }
-        }
+        });
+
+        await Promise.all(promises);
 
         const notificationTypes = await notifications.getAllNotificationTypes();
         notificationTypes.forEach((notificationType) => {
@@ -157,13 +158,14 @@ module.exports = function (User) {
 
         // Update announcement settings
         const cids = await categories.findCidsPublic('announcements');
-        for (const cid of cids) {
+        const promises = cids.map(async cid => {
             const categoryData = await categories.getCategoryData(cid);
             if (categoryData.name === 'Announcements') {
                 await categories.setCategoryField(cid, 'instructorOnly', data.enableInstructorOnly === 1);
-                break;
             }
-        }
+        });
+
+        await Promise.all(promises);
 
         const notificationTypes = await notifications.getAllNotificationTypes();
         notificationTypes.forEach((notificationType) => {
