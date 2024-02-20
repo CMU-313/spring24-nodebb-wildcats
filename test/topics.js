@@ -171,12 +171,12 @@ describe('Topic\'s', () => {
         });
 
         it('should be able to limit student from posting announcements', async () => {
-            const annoucementCategoryObj = await categories.create({
+            const announcementCategoryObj = await categories.create({
                 name: 'Announcements',
                 description: 'Test announcements category created by testing script',
             });
-            const annoucementTopic = {
-                categoryId: annoucementCategoryObj.cid,
+            const announcementTopic = {
+                categoryId: announcementCategoryObj.cid,
                 title: 'Test Announcements Topic Title',
                 content: 'The content of test announcements topic',
             };
@@ -184,25 +184,25 @@ describe('Topic\'s', () => {
             let instructorUid = await User.create({ username: 'instructorUser', accounttype: 'instructor' });
             let studentUid = await User.create({ username: 'studentUser', accounttype: 'student' });
 
-            await categories.setCategoryField(annoucementCategoryObj.cid, 'instructorOnly', true);
+            await categories.setCategoryField(announcementCategoryObj.cid, 'instructorOnly', true);
             // instructor can still post
             await topics.post({
                 uid: instructorUid,
-                title: annoucementTopic.title,
-                content: annoucementTopic.content,
-                cid: annoucementTopic.categoryId,
+                title: announcementTopic.title,
+                content: announcementTopic.content,
+                cid: announcementTopic.categoryId,
             }, (err, result) => {
                 assert.ifError(err);
                 assert(result);
-                annoucementTopic.tid = result.topicData.tid;
+                announcementTopic.tid = result.topicData.tid;
             });
 
             // student can't post
             await topics.post({
                 uid: studentUid,
-                title: annoucementTopic.title,
-                content: annoucementTopic.content,
-                cid: annoucementTopic.categoryId,
+                title: announcementTopic.title,
+                content: announcementTopic.content,
+                cid: announcementTopic.categoryId,
             }, (err) => {
                 assert.equal(err.message, '[[error:instructor-only]]');
             });
