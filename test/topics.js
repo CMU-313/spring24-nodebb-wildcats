@@ -182,10 +182,7 @@ describe('Topic\'s', () => {
             };
             
             let instructorUid = await User.create({ username: 'instructorUser', accounttype: 'instructor' });
-            let student1Uid = await User.create({ username: 'studentUser1', accounttype: 'student' });
-            // two students to avoid post time interval issue
-            let student2Uid = await User.create({ username: 'studentUser2', accounttype: 'student' });
-
+            let studentUid = await User.create({ username: 'studentUser', accounttype: 'student' });
 
             await categories.setCategoryField(annoucementCategoryObj.cid, 'instructorOnly', true);
             // instructor can still post
@@ -202,7 +199,7 @@ describe('Topic\'s', () => {
 
             // student can't post
             await topics.post({
-                uid: student1Uid,
+                uid: studentUid,
                 title: annoucementTopic.title,
                 content: annoucementTopic.content,
                 cid: annoucementTopic.categoryId,
