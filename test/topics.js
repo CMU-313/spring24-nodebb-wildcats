@@ -180,9 +180,9 @@ describe('Topic\'s', () => {
                 title: 'Test Announcements Topic Title',
                 content: 'The content of test announcements topic',
             };
-            
-            let instructorUid = await User.create({ username: 'instructorUser', accounttype: 'instructor' });
-            let studentUid = await User.create({ username: 'studentUser', accounttype: 'student' });
+
+            const instructorUid = await User.create({ username: 'instructorUser', accounttype: 'instructor' });
+            const studentUid = await User.create({ username: 'studentUser', accounttype: 'student' });
 
             await categories.setCategoryField(announcementCategoryObj.cid, 'instructorOnly', true);
             // instructor can still post
