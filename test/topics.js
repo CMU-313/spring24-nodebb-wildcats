@@ -170,6 +170,47 @@ describe('Topic\'s', () => {
             assert.strictEqual(result.body.status.message, 'You do not have enough privileges for this action.');
         });
 
+        it('should be able to limit student from posting announcements', async () => {
+            const annoucementCategoryObj = await categories.create({
+                name: 'Announcements',
+                description: 'Test announcements category created by testing script',
+            });
+            const annoucementTopic = {
+                categoryId: annoucementCategoryObj.cid,
+                title: 'Test Announcements Topic Title',
+                content: 'The content of test announcements topic',
+            };
+            
+            let instructorUid = await User.create({ username: 'instructorUser', accounttype: 'instructor' });
+            let student1Uid = await User.create({ username: 'studentUser1', accounttype: 'student' });
+            // two students to avoid post time interval issue
+            let student2Uid = await User.create({ username: 'studentUser2', accounttype: 'student' });
+
+
+            await categories.setCategoryField(annoucementCategoryObj.cid, 'instructorOnly', true);
+            // instructor can still post
+            await topics.post({
+                uid: instructorUid,
+                title: annoucementTopic.title,
+                content: annoucementTopic.content,
+                cid: annoucementTopic.categoryId,
+            }, (err, result) => {
+                assert.ifError(err);
+                assert(result);
+                annoucementTopic.tid = result.topicData.tid;
+            });
+
+            // student can't post
+            await topics.post({
+                uid: student1Uid,
+                title: annoucementTopic.title,
+                content: annoucementTopic.content,
+                cid: annoucementTopic.categoryId,
+            }, (err) => {
+                assert.equal(err.message, '[[error:instructor-only]]');
+            });
+        });
+
         it('should post a topic as guest if guest group has privileges', async () => {
             const categoryObj = await categories.create({
                 name: 'Test Category',
