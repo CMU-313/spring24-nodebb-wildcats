@@ -111,7 +111,7 @@ module.exports = function (Topics) {
         const categoryData = await categories.getCategoryData(data.cid);
         if (userType === 'student' && categoryData.name === 'Announcements') {
             const instructorOnlyAnnouncement = await categories.getCategoryField(data.cid, 'instructorOnly');
-            if (instructorOnlyAnnouncement) {
+            if (instructorOnlyAnnouncement == 'true') {
                 throw new Error('[[error:instructor-only]]');
             }
         }
