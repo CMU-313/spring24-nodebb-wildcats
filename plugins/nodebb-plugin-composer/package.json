@@ -1,10 +1,10 @@
 {
-  "name": "nodebb-plugin-composer-classroom",
+  "name": "nodebb-plugin-composer",
   "version": "0.0.1",
-  "description": "Classroom composer for NodeBB",
+  "description": "asdfasdfadsfa",
   "main": "library.js",
   "repository": {
-    "type": "git",
+    "type": "git", 
     "url": "https://github.com/CMU-313/spring24-nodebb-code-wildcats"
   },
   "scripts": {
