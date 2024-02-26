@@ -78,8 +78,8 @@ module.exports = function (User) {
         const promises = cids.map(async (cid) => {
             const categoryData = await categories.getCategoryData(cid);
             if (categoryData.name === 'Announcements') {
-                const instructorOnlySetting = await categories.getCategoryField(cid, 'instructorOnly')
-                settings.enableInstructorOnly = (instructorOnlySetting == 'true');
+                const instructorOnlySetting = await categories.getCategoryField(cid, 'instructorOnly');
+                settings.enableInstructorOnly = (instructorOnlySetting === 'true');
             }
         });
 
