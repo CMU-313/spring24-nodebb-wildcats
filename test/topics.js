@@ -184,7 +184,7 @@ describe('Topic\'s', () => {
             const instructorUid = await User.create({ username: 'instructorUser', accounttype: 'instructor' });
             const studentUid = await User.create({ username: 'studentUser', accounttype: 'student' });
 
-            await categories.setCategoryField(announcementCategoryObj.cid, 'instructorOnly', true);
+            await categories.setCategoryField(announcementCategoryObj.cid, 'instructorOnly', 'true');
             // instructor can still post
             await topics.post({
                 uid: instructorUid,
