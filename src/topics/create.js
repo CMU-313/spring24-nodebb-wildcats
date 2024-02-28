@@ -3,6 +3,7 @@
 
 const _ = require('lodash');
 
+// const { ObjectStreamToJSON } = require('sitemap');
 const db = require('../database');
 const utils = require('../utils');
 const slugify = require('../slugify');
@@ -14,12 +15,11 @@ const posts = require('../posts');
 const privileges = require('../privileges');
 const categories = require('../categories');
 const translator = require('../translator');
-const { ObjectStreamToJSON } = require('sitemap');
-const { stringify } = require('../helpers');
+// const { stringify } = require('../helpers');
 
 module.exports = function (Topics) {
     Topics.create = async function (data) {
-        console.log("this is topic create data"+JSON.stringify(data));
+        console.log(`this is topic create data${JSON.stringify(data)}`);
         // This is an internal method, consider using Topics.post instead
         const timestamp = data.timestamp || Date.now();
 
@@ -128,7 +128,7 @@ module.exports = function (Topics) {
         const tid = await Topics.create(data);
 
         let postData = data;
-        console.log("is anonymous here yet"+data);
+        console.log(`is anonymous here yet${data}`);
         postData.tid = tid;
         postData.ip = data.req ? data.req.ip : null;
         postData.isMain = true;

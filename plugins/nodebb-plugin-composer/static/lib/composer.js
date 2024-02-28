@@ -31,14 +31,6 @@ define('composer', [
 		formatting: undefined,
 	};
 
-	// Initialization code for the checkbox
-    $(function() {
-        const anonymizeCheckbox = $('#anonymizeCheckbox');
-        anonymizeCheckbox.on('change', function() {
-            composer.isAnonymous = this.checked;
-        });
-    });
-
 	$(window).off('resize', onWindowResize).on('resize', onWindowResize);
 	onWindowResize();
 
@@ -625,6 +617,7 @@ define('composer', [
 		var thumbEl = postContainer.find('input#topic-thumb-url');
 		var onComposeRoute = postData.hasOwnProperty('template') && postData.template.compose === true;
 		const submitBtn = postContainer.find('.composer-submit');
+		const anonymizeCheckbox = document.getElementById('anonymizeCheckbox');
 
 		titleEl.val(titleEl.val().trim());
 		bodyEl.val(utils.rtrim(bodyEl.val()));
