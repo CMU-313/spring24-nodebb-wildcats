@@ -31,6 +31,14 @@ define('composer', [
 		formatting: undefined,
 	};
 
+	// Initialization code for the checkbox
+    $(function() {
+        const anonymizeCheckbox = $('#anonymizeCheckbox');
+        anonymizeCheckbox.on('change', function() {
+            composer.isAnonymous = this.checked;
+        });
+    });
+
 	$(window).off('resize', onWindowResize).on('resize', onWindowResize);
 	onWindowResize();
 
@@ -682,7 +690,7 @@ define('composer', [
 				cid: categoryList.getSelectedCid(),
 				tags: tags.getTags(post_uuid),
 				timestamp: scheduler.getTimestamp(),
-				isAnonymous: true,
+				isAnonymous: anonymizeCheckbox.checked,
 			};
 		} else if (action === 'posts.reply') {
 			route = `/topics/${postData.tid}`;
@@ -692,7 +700,7 @@ define('composer', [
 				handle: handleEl ? handleEl.val() : undefined,
 				content: bodyEl.val(),
 				toPid: postData.toPid,
-				isAnonymous: true,
+				isAnonymous: anonymizeCheckbox.checked,
 			};
 		} else if (action === 'posts.edit') {
 			method = 'put';
@@ -706,7 +714,7 @@ define('composer', [
 				thumb: thumbEl.val() || '',
 				tags: tags.getTags(post_uuid),
 				timestamp: scheduler.getTimestamp(),
-				isAnonymous: true,
+				isAnonymous: anonymizeCheckbox.checked,
 			};
 		}
 		var submitHookData = {
