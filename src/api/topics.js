@@ -33,6 +33,7 @@ topicsAPI.get = async function (caller, data) {
 };
 
 topicsAPI.create = async function (caller, data) {
+    console.log("hiii im in api topics create"+JSON.stringify(data));
     if (!data) {
         throw new Error('[[error:invalid-data]]');
     }

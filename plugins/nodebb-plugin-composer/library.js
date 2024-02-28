@@ -271,6 +271,7 @@ function generateSaveId(req) {
 }
 
 async function getPostData(req) {
+	console.log("printing request!!!!"+req);
 	if (!req.query.pid && !req.query.toPid) {
 		return null;
 	}
@@ -279,6 +280,7 @@ async function getPostData(req) {
 }
 
 async function getTopicData(req) {
+	console.log("printing request for topic!!!!"+req);
 	if (req.query.tid) {
 		return await topics.getTopicData(req.query.tid);
 	} else if (req.query.pid) {

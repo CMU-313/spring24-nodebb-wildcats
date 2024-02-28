@@ -13,13 +13,17 @@ const utils = require('../utils');
 
 module.exports = function (Posts) {
     Posts.create = async function (data) {
+        console.log("print if run here");
+        console.log(data);
         // This is an internal method, consider using Topics.reply instead
         const { uid } = data;
         const { tid } = data;
         const content = data.content.toString();
         const timestamp = data.timestamp || Date.now();
         const isMain = data.isMain || false;
-        const isAnonymous = data.isAnonymous || false;
+        const isAnonymous = true; 
+		console.log("this is anonymous value:"+isAnonymous);
+		// window.alert("this is anonymous value:"+isAnonymous);
         if (!uid && parseInt(uid, 10) !== 0) {
             throw new Error('[[error:invalid-uid]]');
         }

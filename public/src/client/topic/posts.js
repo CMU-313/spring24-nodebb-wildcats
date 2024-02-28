@@ -17,6 +17,7 @@ define('forum/topic/posts', [
     Posts.signaturesShown = {};
 
     Posts.onNewPost = function (data) {
+        console.log("on new post this is data"+data);
         if (
             !data ||
             !data.posts ||

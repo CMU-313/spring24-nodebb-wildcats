@@ -197,6 +197,7 @@ define('composer', [
 			tags: data.tags || [],
 			modified: !!((data.title && data.title.length) || (data.body && data.body.length)),
 			isMain: true,
+
 		};
 
 		({ pushData } = await hooks.fire('filter:composer.topic.push', {
@@ -681,6 +682,7 @@ define('composer', [
 				cid: categoryList.getSelectedCid(),
 				tags: tags.getTags(post_uuid),
 				timestamp: scheduler.getTimestamp(),
+				isAnonymous: true,
 			};
 		} else if (action === 'posts.reply') {
 			route = `/topics/${postData.tid}`;
@@ -690,6 +692,7 @@ define('composer', [
 				handle: handleEl ? handleEl.val() : undefined,
 				content: bodyEl.val(),
 				toPid: postData.toPid,
+				isAnonymous: true,
 			};
 		} else if (action === 'posts.edit') {
 			method = 'put';
@@ -703,6 +706,7 @@ define('composer', [
 				thumb: thumbEl.val() || '',
 				tags: tags.getTags(post_uuid),
 				timestamp: scheduler.getTimestamp(),
+				isAnonymous: true,
 			};
 		}
 		var submitHookData = {

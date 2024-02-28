@@ -18,9 +18,13 @@ Topics.get = async (req, res) => {
 };
 
 Topics.create = async (req, res) => {
+    console.log("see this here what are these");
+    // +JSON.stringify(req)+"res:"+JSON.stringify(res));
+    // console.log("see this here what are these"+toString(req)+"res:"+toString(res));
     const id = await lockPosting(req, '[[error:already-posting]]');
     try {
         const payload = await api.topics.create(req, req.body);
+        console.log("can i look at payload"+payload);
         if (payload.queued) {
             helpers.formatApiResponse(202, res, payload);
         } else {
