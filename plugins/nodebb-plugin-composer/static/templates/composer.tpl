@@ -95,11 +95,11 @@
 		</div>
 
 		<div class="checkbox" data-property="anonymizeUser">
-			<label>
-			<input type="checkbox" id="anonymizeCheckbox"> 
-			<strong> Anonymize Your Post </strong>
+			<label for="anonymizeCheckbox">
+				<input type="checkbox" id="anonymizeCheckbox" name="anonymizeCheckbox">
+				<strong> Anonymize Your Post </strong>
 			</label>
-		</div> 
+		</div>
 
 		<div class="row write-preview-container">
 			<div class="write-container">

@@ -617,10 +617,7 @@ define('composer', [
 		var thumbEl = postContainer.find('input#topic-thumb-url');
 		var onComposeRoute = postData.hasOwnProperty('template') && postData.template.compose === true;
 		const submitBtn = postContainer.find('.composer-submit');
-		console.log('checkpoint 1');
 		const anonymizeCheckbox = document.getElementById('anonymizeCheckbox');
-		console.log(anonymizeCheckbox);
-		console.log('checkpoint 2');
 
 		titleEl.val(titleEl.val().trim());
 		bodyEl.val(utils.rtrim(bodyEl.val()));
