@@ -536,7 +536,8 @@ describe('API', async () => {
         // Compare the schema to the response
         required.forEach((prop) => {
             if (schema.hasOwnProperty(prop)) {
-                // assert(response.hasOwnProperty(prop), `"${prop}" is a required property (path: ${method} ${path}, context: ${context})`);
+                // assert(response.hasOwnProperty(prop), `"${prop}" 
+                // is a required property (path: ${method} ${path}, context: ${context})`);
 
                 // Don't proceed with type-check if the value could possibly be unset (nullable: true, in spec)
                 if (response[prop] === null && schema[prop].nullable === true) {
