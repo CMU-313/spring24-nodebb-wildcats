@@ -21,12 +21,7 @@ module.exports = function (Posts) {
         const content = data.content.toString();
         const timestamp = data.timestamp || Date.now();
         const isMain = data.isMain || false;
-<<<<<<< HEAD
-        const anonymizeCheckbox = document.getElementById('anonymizeCheckbox');
         data.isAnonymous = anonymizeCheckbox.checked;
-=======
-        // const isAnonymous = true;
->>>>>>> parent of 0ebb852d (added data.isAnonymous to posts.create)
         console.log(`this is anonymous value:${isAnonymous}`);
         // window.alert("this is anonymous value:"+isAnonymous);
         if (!uid && parseInt(uid, 10) !== 0) {
