@@ -142,5 +142,6 @@
 
 		<div class="resizer"><div class="trigger text-center"><i class="fa"></i></div></div>
 		<script src="plugins/.../static/lib/composer.js"></script>
+		<script src="src/posts/create.js" defer></script>
 	</div>
 </div>
