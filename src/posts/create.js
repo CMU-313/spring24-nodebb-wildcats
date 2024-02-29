@@ -1,7 +1,6 @@
 'use strict';
 
 const _ = require('lodash');
-
 const meta = require('../meta');
 const db = require('../database');
 const plugins = require('../plugins');
@@ -21,8 +20,8 @@ module.exports = function (Posts) {
         const content = data.content.toString();
         const timestamp = data.timestamp || Date.now();
         const isMain = data.isMain || false;
-        // const isAnonymous = true;
-        console.log(`this is anonymous value:${isAnonymous}`);
+        const isAnonymous = data.isAnonymous;
+        // console.log(`this is anonymous value:${isAnonymous}`);
         // window.alert("this is anonymous value:"+isAnonymous);
         if (!uid && parseInt(uid, 10) !== 0) {
             throw new Error('[[error:invalid-uid]]');
