@@ -618,6 +618,7 @@ define('composer', [
 		var onComposeRoute = postData.hasOwnProperty('template') && postData.template.compose === true;
 		const submitBtn = postContainer.find('.composer-submit');
 		const anonymizeCheckbox = document.getElementById('anonymizeCheckbox');
+		console.log(anonymizeCheckbox);
 
 		titleEl.val(titleEl.val().trim());
 		bodyEl.val(utils.rtrim(bodyEl.val()));
