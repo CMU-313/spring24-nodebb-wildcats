@@ -21,7 +21,7 @@ module.exports = function (Posts) {
         const content = data.content.toString();
         const timestamp = data.timestamp || Date.now();
         const isMain = data.isMain || false;
-        data.isAnonymous = anonymizeCheckbox.checked;
+        // const isAnonymous = true;
         console.log(`this is anonymous value:${isAnonymous}`);
         // window.alert("this is anonymous value:"+isAnonymous);
         if (!uid && parseInt(uid, 10) !== 0) {
