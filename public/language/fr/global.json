@@ -122,5 +122,6 @@
     "edited": "Modifié",
     "disabled": "Désactivé",
     "select": "Sélectionner",
+    "instructor_only": "Instructor Only",
     "user-search-prompt": "Écrivez ici pour rechercher des utilisateurs ..."
 }

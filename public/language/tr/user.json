@@ -195,5 +195,6 @@
     "emailUpdate.optional": "<strong>Bu bölüm tercihe bağlıdır</strong>. Bir e-posta adresi girmek zorunda değilsiniz, fakat onaylanmış bir e-posta adresi olmadan hesabınızı veya girişinizi e-posta adresiniz ile kurtaramazsınız. ",
     "emailUpdate.required": "<strong>Bu bölüm zorunludur</strong>.",
     "emailUpdate.change-instructions": "Girilen e-posta adresine kişiye özel bir bağlantı içeren bir onay e-postası gönderilecektir. Bu bağlantıya erişmek, e-posta adresinin sahibi olduğunuzu onaylayacak ve hesabınızda etkin hale gelecektir. İstediğiniz zaman, hesap sayfanızdan kayıtlı e-postanızı güncelleyebilirsiniz.",
+    "instructor_only": "Only Instructors are able to post announcements",
     "emailUpdate.password-challenge": "Hesabın size ait olduğunu doğrulamak için lütfen şifrenizi giriniz"
 }

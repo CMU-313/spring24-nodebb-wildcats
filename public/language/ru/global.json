@@ -122,5 +122,6 @@
     "edited": "Отредактированный",
     "disabled": "Отключено",
     "select": "Выбрать",
+    "instructor_only": "Instructor Only",
     "user-search-prompt": "Введите что-нибудь здесь, чтобы найти пользователей..."
 }

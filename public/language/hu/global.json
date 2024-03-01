@@ -122,5 +122,6 @@
     "edited": "Szerkesztett",
     "disabled": "Letiltva",
     "select": "Kiválaszt",
+    "instructor_only": "Instructor Only",
     "user-search-prompt": "Írj be valamit, hogy felhasználókra keress..."
 }
