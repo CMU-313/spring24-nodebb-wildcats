@@ -27,3 +27,23 @@ You'll see an error message that says "Your instructor disabled you to post anno
 The automated test can be found under **test/topic.js**, between line 173 and line 212. The test make sure that if the instructor only announcements setting is enabled, then instructors can still post in the announcements category, but students cannot post in the announcements category. 
 
 Since the logic for replying and viewing the post are isolated, we don't need to test on them; since the default setting is false for the instructor only announcements, the ability for general user to post is already covered by the existing generalized test. Thus, the added automated test is effectice and sufficient.
+
+## NEW FEATURE - Anonymous Posting
+With the new feature, users will be able to toggle a post setting to enable/disable anonymous posting.
+
+## USAGE
+After logging into your account, click on any of the categories to post in.
+
+Click on **New Topic** to start drafting the post.
+
+Before clicking **Submit**, check the checkbox labeled **Anonymize Your Post** to hide your username and post under the name 'Anonymous'. If the checkbox is left unchecked, your username will show as normal.
+
+## USER TESTING
+You can test the new feature by following these steps:
+1. Create an account, select any account type.
+2. Click on any of the categories to post in and start drafting a post by clicking **New Topic**.
+3. Check the **Anonymize Your Post** checkbox.
+4. Click **Submit** to make the post, and see that 'Anonymous' replaces your username.
+5. Make another post by following step 2.
+6. This time, do NOT check the **Anonymize Your Post** checkbox.
+7. Click **Submit** to make the post, and see that your username shows as normal.
