@@ -50,6 +50,6 @@ You can test the new feature by following these steps:
 
 ## AUTOMATED TESTING
 
-The automated test can be found under **test/posts.js**, between line 544 and line 552. This test makes sure that every post has an isAnonymous property, and if you check the anonymize checkbox, it sets isAnonymous to true. 
+The added automated test can be found in **test/posts.js**. This test makes sure that every post has an isAnonymous property, and if you check the anonymize checkbox, it sets isAnonymous to true. 
 
 Since the default for isAnonymous is false, the ability to post a non-anonymous post is already covered by the existing post tests. Therefore, the added test that tests for isAnonymous==true is sufficient to test that checking the checkbox does indeed anonymize the post.
