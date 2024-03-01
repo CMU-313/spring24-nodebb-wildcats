@@ -170,6 +170,44 @@ describe('Topic\'s', () => {
             assert.strictEqual(result.body.status.message, 'You do not have enough privileges for this action.');
         });
 
+        it('should be able to limit student from posting announcements', async () => {
+            const announcementCategoryObj = await categories.create({
+                name: 'Announcements',
+                description: 'Test announcements category created by testing script',
+            });
+            const announcementTopic = {
+                categoryId: announcementCategoryObj.cid,
+                title: 'Test Announcements Topic Title',
+                content: 'The content of test announcements topic',
+            };
+
+            const instructorUid = await User.create({ username: 'instructorUser', accounttype: 'instructor' });
+            const studentUid = await User.create({ username: 'studentUser', accounttype: 'student' });
+
+            await categories.setCategoryField(announcementCategoryObj.cid, 'instructorOnly', 'true');
+            // instructor can still post
+            await topics.post({
+                uid: instructorUid,
+                title: announcementTopic.title,
+                content: announcementTopic.content,
+                cid: announcementTopic.categoryId,
+            }, (err, result) => {
+                assert.ifError(err);
+                assert(result);
+                announcementTopic.tid = result.topicData.tid;
+            });
+
+            // student can't post
+            await topics.post({
+                uid: studentUid,
+                title: announcementTopic.title,
+                content: announcementTopic.content,
+                cid: announcementTopic.categoryId,
+            }, (err) => {
+                assert.equal(err.message, '[[error:instructor-only]]');
+            });
+        });
+
         it('should post a topic as guest if guest group has privileges', async () => {
             const categoryObj = await categories.create({
                 name: 'Test Category',

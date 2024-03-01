@@ -62,6 +62,10 @@ module.exports = function (Categories) {
         return searchResult;
     };
 
+    Categories.findCidsPublic = async function (query) {
+        return await findCids(query, 500);
+    };
+
     async function findCids(query, hardCap) {
         if (!query || String(query).length < 2) {
             return [];
