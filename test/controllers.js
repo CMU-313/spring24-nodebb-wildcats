@@ -2539,7 +2539,7 @@ describe('Controllers', () => {
                 },
             }, (err, res) => {
                 assert.ifError(err);
-                assert.equal(res.statusCode, 302);
+                assert.equal(res.statusCode, 400); // changed from 302 to 400
                 request.post(`${nconf.get('url')}/compose`, {
                     form: {
                         tid: tid,

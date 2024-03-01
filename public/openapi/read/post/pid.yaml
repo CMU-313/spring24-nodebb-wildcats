@@ -30,4 +30,5 @@ get:
                 description: 'The timestamp when the post was created'
               isAnonymous:
                 type: boolean   # Add the isAnonymous property
+                nullable: true
             

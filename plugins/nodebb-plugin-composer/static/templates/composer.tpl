@@ -95,11 +95,11 @@
 		</div>
 
 		<div class="checkbox" data-property="anonymizeUser">
-					<label>
-						<input type="checkbox"> 
-						<strong> Anonymize Your Post </strong>
-					</label>
-		</div> 
+			<label for="anonymizeCheckbox">
+				<input type="checkbox" id="anonymizeCheckbox" name="anonymizeCheckbox">
+				<strong> Anonymize Your Post </strong>
+			</label>
+		</div>
 
 		<div class="row write-preview-container">
 			<div class="write-container">
@@ -141,5 +141,7 @@
 		<div class="imagedrop"><div>[[topic:composer.drag_and_drop_images]]</div></div>
 
 		<div class="resizer"><div class="trigger text-center"><i class="fa"></i></div></div>
+		<script src="plugins/.../static/lib/composer.js"></script>
+		<script src="src/posts/create.js" defer></script>
 	</div>
 </div>

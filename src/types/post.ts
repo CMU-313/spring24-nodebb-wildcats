@@ -17,7 +17,6 @@ export type PostObject = {
   topic: TopicObject;
   category: CategoryObject;
   isMainPost: boolean;
-  isAnonymous: boolean;
+  isAnonymous: boolean | null;
   replies: number;
-  anonymizes: boolean;
 };

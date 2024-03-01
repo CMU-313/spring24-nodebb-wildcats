@@ -1,11 +1,11 @@
 {
-  "name": "nodebb-plugin-composer-default",
-  "version": "9.2.4",
-  "description": "Default composer for NodeBB",
+  "name": "nodebb-plugin-composer",
+  "version": "0.0.1",
+  "description": "asdfasdfadsfa",
   "main": "library.js",
   "repository": {
-    "type": "git",
-    "url": "https://github.com/NodeBB/nodebb-plugin-composer-default"
+    "type": "git", 
+    "url": "https://github.com/CMU-313/spring24-nodebb-code-wildcats"
   },
   "scripts": {
     "lint": "eslint ."
@@ -17,12 +17,12 @@
     "markdown"
   ],
   "author": {
-    "name": "NodeBB Team",
-    "email": "sales@nodebb.org"
+    "name": "Wildcats",
+    "email": "wenchaoh@andrew.cmu.edu"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NodeBB/nodebb-plugin-composer-default/issues"
+    "url": "https://github.com/CMU-313/spring24-nodebb-code-wildcats/issues"
   },
   "readmeFilename": "README.md",
   "nbbpm": {

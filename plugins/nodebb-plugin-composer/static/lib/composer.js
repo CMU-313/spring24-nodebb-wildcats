@@ -197,6 +197,7 @@ define('composer', [
 			tags: data.tags || [],
 			modified: !!((data.title && data.title.length) || (data.body && data.body.length)),
 			isMain: true,
+
 		};
 
 		({ pushData } = await hooks.fire('filter:composer.topic.push', {
@@ -616,6 +617,7 @@ define('composer', [
 		var thumbEl = postContainer.find('input#topic-thumb-url');
 		var onComposeRoute = postData.hasOwnProperty('template') && postData.template.compose === true;
 		const submitBtn = postContainer.find('.composer-submit');
+		const anonymizeCheckbox = document.getElementById('anonymizeCheckbox');
 
 		titleEl.val(titleEl.val().trim());
 		bodyEl.val(utils.rtrim(bodyEl.val()));
@@ -681,6 +683,7 @@ define('composer', [
 				cid: categoryList.getSelectedCid(),
 				tags: tags.getTags(post_uuid),
 				timestamp: scheduler.getTimestamp(),
+				isAnonymous: anonymizeCheckbox.checked,
 			};
 		} else if (action === 'posts.reply') {
 			route = `/topics/${postData.tid}`;
@@ -690,6 +693,7 @@ define('composer', [
 				handle: handleEl ? handleEl.val() : undefined,
 				content: bodyEl.val(),
 				toPid: postData.toPid,
+				isAnonymous: anonymizeCheckbox.checked,
 			};
 		} else if (action === 'posts.edit') {
 			method = 'put';
@@ -703,6 +707,7 @@ define('composer', [
 				thumb: thumbEl.val() || '',
 				tags: tags.getTags(post_uuid),
 				timestamp: scheduler.getTimestamp(),
+				isAnonymous: anonymizeCheckbox.checked,
 			};
 		}
 		var submitHookData = {
