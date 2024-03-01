@@ -20,7 +20,7 @@ module.exports = function (Posts) {
         const content = data.content.toString();
         const timestamp = data.timestamp || Date.now();
         const isMain = data.isMain || false;
-        const isAnonymous = data.isAnonymous;
+        const { isAnonymous } = data.isAnonymous;
         // console.log(`this is anonymous value:${isAnonymous}`);
         // window.alert("this is anonymous value:"+isAnonymous);
         if (!uid && parseInt(uid, 10) !== 0) {
