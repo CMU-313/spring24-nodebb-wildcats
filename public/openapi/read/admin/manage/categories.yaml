@@ -47,7 +47,7 @@ get:
                         subCategoriesPerPage:
                           type: number
                         instructorOnly:
-                          type: boolean
+                          type: string
                         children:
                           type: array
                           description: Array of children categories

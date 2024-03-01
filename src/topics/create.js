@@ -107,12 +107,11 @@ module.exports = function (Topics) {
         }
 
         // Check if the user is student and post is announcement
-        // TODO: Add forum setting, etc., such that this can be toggled
-        const instructorOnlyAnnouncement = false;
-        if (instructorOnlyAnnouncement) {
-            const userType = await user.getUserField(uid, 'accounttype');
-            const categoryData = await categories.getCategoryData(data.cid);
-            if (userType === 'student' && categoryData.name === 'Announcements') {
+        const userType = await user.getUserField(uid, 'accounttype');
+        const categoryData = await categories.getCategoryData(data.cid);
+        if (userType === 'student' && categoryData.name === 'Announcements') {
+            const instructorOnlyAnnouncement = await categories.getCategoryField(data.cid, 'instructorOnly');
+            if (instructorOnlyAnnouncement === 'true') {
                 throw new Error('[[error:instructor-only]]');
             }
         }

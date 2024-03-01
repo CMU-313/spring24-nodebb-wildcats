@@ -76,7 +76,7 @@ CategoryObject:
           type: number
           description: The number of subcategories to display on the categories and category page
         instructorOnly:
-          type: boolean
+          type: string
           description: If the category is instructor only
     - type: object
       description: Optional properties that may or may not be present (except for `cid`, which is always present, and is only here as a hack to pass validation)
