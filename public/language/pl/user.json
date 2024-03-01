@@ -195,5 +195,6 @@
     "emailUpdate.optional": "<strong>This field is optional</strong>. You are not obligated to provide your email address, but without a validated email you will not be able to recover your account or login with your email.",
     "emailUpdate.required": "<strong>To pole jest wymagane</strong>.",
     "emailUpdate.change-instructions": "Email z unikalnym linkiem zostanie wysłany na wprowadzony adres email. Otwarcie tego linku potwierdzi, że podany adres email należy do Ciebie. W każdej chwili możesz go zmienić w edycji profilu.",
+    "instructor_only": "Only Instructors are able to post announcements",
     "emailUpdate.password-challenge": "Proszę wprowadź hasło aby potwierdzić, że to konto należy do Ciebie."
 }

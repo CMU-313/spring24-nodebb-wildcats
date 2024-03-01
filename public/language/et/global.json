@@ -122,5 +122,6 @@
     "edited": "Edited",
     "disabled": "Disabled",
     "select": "Select",
+    "instructor_only": "Instructor Only",
     "user-search-prompt": "Type something here to find users..."
 }

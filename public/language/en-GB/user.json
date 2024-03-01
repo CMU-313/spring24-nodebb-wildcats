@@ -218,7 +218,5 @@
 	"emailUpdate.required": "<strong>This field is required</strong>.",
 	"emailUpdate.change-instructions": "A confirmation email will be sent to the entered email address with a unique link. Accessing that link will confirm your ownership of the email address and it will become active on your account. At any time, you are able to update your email on file from within your account page.",
 	"emailUpdate.password-challenge": "Please enter your password in order to verify account ownership.",
-    
 	"instructor_only": "Only Instructors are able to post announcements"
-	
 }

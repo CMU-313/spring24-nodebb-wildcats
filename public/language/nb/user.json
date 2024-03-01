@@ -195,5 +195,6 @@
     "emailUpdate.optional": "<strong>Dette feltet er valgfritt</strong>. Du er ikke forpliktet til å oppgi e-postadressen din, men uten en validert e-postadresse vil du ikke kunne gjenopprette kontoen din eller logge på med e-postadressen din.",
     "emailUpdate.required": "<strong>Dette feltet er obligatorisk</strong>",
     "emailUpdate.change-instructions": "En bekreftelses-e-post med en unik lenke vil bli sendt til den angitte e-postadressen. Ved å klikke på lenken, vil du bekrefte at du eier e-postadressen, og den blir aktiv på kontoen din. Du kan når som helst oppdatere e-postadressen på brukerprofilen din.",
+    "instructor_only": "Only Instructors are able to post announcements",
     "emailUpdate.password-challenge": "Please enter your password in order to verify account ownership."
 }

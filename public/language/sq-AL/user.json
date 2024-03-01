@@ -195,5 +195,6 @@
     "emailUpdate.optional": "Kjo fushë është fakultative. Ju nuk jeni të detyruar të jepni adresën tuaj të emailit, por pa një email të vërtetuar nuk do të jeni në gjendje të rikuperoni llogarinë tuaj ose të identifikoheni me emailin tuaj.",
     "emailUpdate.required": "<strong>Kjo fushë është e detyrueshme</strong>.",
     "emailUpdate.change-instructions": "Një email konfirmimi do të dërgohet në adresën e postës elektronike të dhene me një link unik. Hyrja në atë link do të konfirmojë zotërimin tuaj të adresës së emailit dhe ajo do të bëhet aktive në llogarinë tuaj. Në çdo kohë, ju mund të përditësoni emailin tuaj në dosje nga faqja e llogarisë tuaj.",
+    "instructor_only": "Only Instructors are able to post announcements",
     "emailUpdate.password-challenge": "Please enter your password in order to verify account ownership."
 }
