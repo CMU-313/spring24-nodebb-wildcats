@@ -63,6 +63,7 @@
     "no-teaser": "Teaseren eksisterer ikke",
     "no-flag": "Flag does not exist",
     "no-privileges": "Du har ikke nok rettigheter til å utføre denne handlingen.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Kategori deaktivert",
     "topic-locked": "Emne låst",
     "post-edit-duration-expired": "Du har bare lov til å redigere innlegg i %1 sekund(er) etter at det er sendt",

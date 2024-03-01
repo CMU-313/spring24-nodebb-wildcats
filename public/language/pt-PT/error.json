@@ -63,6 +63,7 @@
     "no-teaser": "Não existe pré-visualização",
     "no-flag": "Flag does not exist",
     "no-privileges": "Não possuis privilégios suficientes para esta ação.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Categoria desativada",
     "topic-locked": "Tópico bloqueado",
     "post-edit-duration-expired": "Só tens permissão para editar publicações %1 segundo(s) depois da sua publicação",

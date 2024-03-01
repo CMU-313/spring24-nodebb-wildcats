@@ -63,6 +63,7 @@
     "no-teaser": "O teaser não existe",
     "no-flag": "Flag does not exist",
     "no-privileges": "Você não possui privilégios suficientes para esta ação.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Categoria desativada",
     "topic-locked": "Tópico Trancado",
     "post-edit-duration-expired": "Você só pode editar posts %1 segundo(s) após postar.",

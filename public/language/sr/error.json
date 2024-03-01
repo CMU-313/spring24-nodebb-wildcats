@@ -63,6 +63,7 @@
     "no-teaser": "Исечак не постоји",
     "no-flag": "Заставица не постоји",
     "no-privileges": "Немате довољне привилегије за обављање ове радње.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Категорија је онемогућена",
     "topic-locked": "Тема је закључана",
     "post-edit-duration-expired": "Време у којем вам је дозвољено уређивање порука након објављивања: %1 сек.",

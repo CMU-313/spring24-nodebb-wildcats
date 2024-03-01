@@ -63,6 +63,7 @@
     "no-teaser": "İleti Yok",
     "no-flag": "Şikayet Yok",
     "no-privileges": "Bu işlemi yapmak için yeterli yetkiniz yok.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Kategori aktif değil",
     "topic-locked": "Başlık Kilitli",
     "post-edit-duration-expired": "Gönderilen iletiler %1 saniyeden sonra değiştirilemez",

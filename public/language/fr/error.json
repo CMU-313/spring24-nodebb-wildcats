@@ -63,6 +63,7 @@
     "no-teaser": "L’aperçu n'existe pas",
     "no-flag": "Le signalement n'existe pas",
     "no-privileges": "Vous n'avez pas les privilèges nécessaires pour effectuer cette action.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Catégorie désactivée",
     "topic-locked": "Sujet verrouillé",
     "post-edit-duration-expired": "Vous ne pouvez modifier un message que pendant %1 seconde(s) après l'avoir posté.",

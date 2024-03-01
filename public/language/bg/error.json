@@ -63,6 +63,7 @@
     "no-teaser": "Резюмето не съществува",
     "no-flag": "Докладът не съществува",
     "no-privileges": "Нямате достатъчно права за това действие.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Категорията е изключена",
     "topic-locked": "Темата е заключена",
     "post-edit-duration-expired": "Можете да редактирате публикациите си до %1 секунда/и, след като ги пуснете",

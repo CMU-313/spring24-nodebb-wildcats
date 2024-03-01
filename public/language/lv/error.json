@@ -63,6 +63,7 @@
     "no-teaser": "Ievadapraksts nav atrasts",
     "no-flag": "Flag does not exist",
     "no-privileges": "Tev nepietiek tiesības šai darbībai.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Kategorija ir atspējota",
     "topic-locked": "Temats ir slēgts",
     "post-edit-duration-expired": "Rakstus drīkst rediģēt tikai līdz %1 sekundēm pēc publicēšanas",

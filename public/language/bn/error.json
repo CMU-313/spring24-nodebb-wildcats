@@ -63,6 +63,7 @@
     "no-teaser": "টিজারটি খুজে পাওয়া যায় নি",
     "no-flag": "Flag does not exist",
     "no-privileges": "এই কাজটির জন্য আপনার পর্যাপ্ত অধিকার নেই",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "বিভাগটি নিষ্ক্রিয়",
     "topic-locked": "টপিক বন্ধ",
     "post-edit-duration-expired": "You are only allowed to edit posts for %1 second(s) after posting",

@@ -63,6 +63,7 @@
     "no-teaser": "Zusammenfassung existiert nicht",
     "no-flag": "Markierung existiert nicht",
     "no-privileges": "Du verfügst nicht über ausreichende Berechtigungen, um die Aktion durchzuführen.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Kategorie ist deaktiviert",
     "topic-locked": "Thema ist gesperrt",
     "post-edit-duration-expired": "Entschuldigung, du darfst Beiträge nur %1 Sekunde(n) nach dem Veröffentlichen editieren.",

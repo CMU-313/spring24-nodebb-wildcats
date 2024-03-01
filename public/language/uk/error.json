@@ -63,6 +63,7 @@
     "no-teaser": "Тизер не існує",
     "no-flag": "Flag does not exist",
     "no-privileges": "У вас недостатньо повноважень для цієї дії. ",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Категорію відключено",
     "topic-locked": "Тему заблоковано",
     "post-edit-duration-expired": "Ви можете редагувати пости лиш на протязі %1 секунд(и) з часу відправки",

@@ -63,6 +63,7 @@
     "no-teaser": "主题预览不存在",
     "no-flag": "Flag does not exist",
     "no-privileges": "您没有权限执行此操作。",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "版块已禁用",
     "topic-locked": "主题已锁定",
     "post-edit-duration-expired": "您只能在发表后 %1 秒内修改内容",

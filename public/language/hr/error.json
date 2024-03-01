@@ -63,6 +63,7 @@
     "no-teaser": "Zadirkivač ne postoji",
     "no-flag": "Flag does not exist",
     "no-privileges": "Nemate privilegije za ovu radnju.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Kategorija onemogućena",
     "topic-locked": "Tema zaključana",
     "post-edit-duration-expired": "Dozvoljeno vam je uređivanje %1 sekundi nakon objave",

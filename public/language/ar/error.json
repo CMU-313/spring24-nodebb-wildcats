@@ -63,6 +63,7 @@
     "no-teaser": "مقتطف غير موجود",
     "no-flag": "Flag does not exist",
     "no-privileges": "لاتملك الصلاحيات اللازمة للقيام بهذه العملية",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "قائمة معطلة",
     "topic-locked": "الموضوع مقفول",
     "post-edit-duration-expired": "يسمح لك بتعديل مشاركتك حتى %1 ثانية من نشرها",

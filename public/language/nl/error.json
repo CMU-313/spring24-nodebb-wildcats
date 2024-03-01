@@ -63,6 +63,7 @@
     "no-teaser": "Dit voorproefje bestaat niet",
     "no-flag": "Flag does not exist",
     "no-privileges": "Onvoldoende rechten om deze actie uit te voeren",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Categorie uitgeschakeld",
     "topic-locked": "Onderwerp gesloten",
     "post-edit-duration-expired": "Het is slechts toegestaan om binnen %1 seconde(n) na plaatsen van het bericht, deze te bewerken.",

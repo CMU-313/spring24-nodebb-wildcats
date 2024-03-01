@@ -63,6 +63,7 @@
     "no-teaser": "Eelvaadet ei eksisteeri",
     "no-flag": "Flag does not exist",
     "no-privileges": "Sul pole piisavalt õigusi.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Kategooria keelatud",
     "topic-locked": "Teema lukustatud",
     "post-edit-duration-expired": "Te peate ootama %1 sekund(it), enne kui oma postitust muudate.",

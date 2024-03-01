@@ -63,6 +63,7 @@
     "no-teaser": "Zwiastun nie istnieje",
     "no-flag": "Flag does not exist",
     "no-privileges": "Nie masz przywileju wykonywania tej akcji",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Kategoria wyłączona.",
     "topic-locked": "Temat zablokowany",
     "post-edit-duration-expired": "Możesz edytować posty tylko przez %1 sekund(y) po ich napisaniu",

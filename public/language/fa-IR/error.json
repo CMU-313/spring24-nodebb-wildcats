@@ -63,6 +63,7 @@
     "no-teaser": "تیزر وجود ندارد",
     "no-flag": "Flag does not exist",
     "no-privileges": "شما دسترسی کافی برای این کار را ندارید",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "دسته غیر‌فعال شد.",
     "topic-locked": "موضوع بسته شد.",
     "post-edit-duration-expired": "شما تنها می توانید %1 ثانیه پس از فرستادن پست آن‌را ویرایش کنید",

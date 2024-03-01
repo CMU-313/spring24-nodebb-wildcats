@@ -63,6 +63,7 @@
     "no-teaser": "Teaser tidak ditemukan",
     "no-flag": "Flag does not exist",
     "no-privileges": "Kamu tidak punya cukup izin untuk melakukan ini",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Kategori ditiadakan",
     "topic-locked": "Topik dikunci",
     "post-edit-duration-expired": "You are only allowed to edit posts for %1 second(s) after posting",

@@ -63,6 +63,7 @@
     "no-teaser": "Teaser does not exist",
     "no-flag": "Flag does not exist",
     "no-privileges": "Oikeutesi eivät riitä toiminnon suorittamiseen.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Kategoria ei ole käytössä",
     "topic-locked": "Aihe lukittu",
     "post-edit-duration-expired": "You are only allowed to edit posts for %1 second(s) after posting",

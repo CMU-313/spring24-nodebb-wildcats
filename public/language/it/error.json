@@ -63,6 +63,7 @@
     "no-teaser": "Teaser non esiste",
     "no-flag": "Segnalazione non esiste",
     "no-privileges": "Non hai abbastanza privilegi per questa azione.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Categoria disabilitata",
     "topic-locked": "Discussione Bloccata",
     "post-edit-duration-expired": "Puoi modificare i post solo per %1 secondo(i) dopo la pubblicazione",

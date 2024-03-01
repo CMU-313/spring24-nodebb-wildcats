@@ -63,6 +63,7 @@
     "no-teaser": "תקציר אינו קיים",
     "no-flag": "דיווח לא קיים",
     "no-privileges": "ההרשאות שלכם אינן מספיקות לביצוע פעולה זו.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "קטגוריה לא פעילה",
     "topic-locked": "נושא נעול",
     "post-edit-duration-expired": "ניתן לערוך פוסטים עד %1 שניות מרגע כתיבת הפוסט",

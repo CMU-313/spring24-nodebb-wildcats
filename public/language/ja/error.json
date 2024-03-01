@@ -63,6 +63,7 @@
     "no-teaser": "ティーザーが存在しません",
     "no-flag": "Flag does not exist",
     "no-privileges": "あなたがこの行為する権利がありません。",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "この板は無効された",
     "topic-locked": "スレッドがロックされた",
     "post-edit-duration-expired": "あなたが%1秒後に投稿を編集する事が許されます",

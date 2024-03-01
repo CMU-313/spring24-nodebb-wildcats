@@ -63,6 +63,7 @@
     "no-teaser": "Förhandsvisningen finns inte",
     "no-flag": "Flag does not exist",
     "no-privileges": "Du har inte tillräckliga rättigheter för den här åtgärden.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Kategorin inaktiverad",
     "topic-locked": "Ämnet låst",
     "post-edit-duration-expired": "Du kan endast ändra inlägg inom %1 sekund(er) efter att ha skickat det",
