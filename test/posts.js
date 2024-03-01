@@ -541,6 +541,12 @@ describe('Post\'s', () => {
             assert(!res.hasOwnProperty('bookmarks'));
         });
 
+        // it('should show if user is anonymous', async () => {
+        //     const data = await apiPosts.anonymous({ uid: voterUid }, { pid: pid });
+        //     assert.equal(data.anonymous, true, 'User should be anonymous');
+        // });
+
+
         it('should disallow post editing for new users if post was made past the threshold for editing', async () => {
             meta.config.newbiePostEditDuration = 1;
             await sleep(1000);
