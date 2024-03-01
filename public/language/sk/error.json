@@ -63,6 +63,7 @@
     "no-teaser": "Ukážka neexistuje",
     "no-flag": "Flag does not exist",
     "no-privileges": "Na túto akciu nemáte dostatočné oprávnenia.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Kategória je zablokovaná",
     "topic-locked": "Téma je uzamknutá",
     "post-edit-duration-expired": "Upravovať príspevky môžete až za %1 sekúnd(y) po vytvorení",

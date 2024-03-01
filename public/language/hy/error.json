@@ -63,6 +63,7 @@
     "no-teaser": "Թիզերը գոյություն չունի",
     "no-flag": "Դրոշ գոյություն չունի",
     "no-privileges": "Դուք չունեք բավարար արտոնություններ այս գործողության համար:",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Կատեգորիան անջատված է",
     "topic-locked": "Թեման փակված է",
     "post-edit-duration-expired": "Ձեզ թույլատրվում է խմբագրել հաղորդագրությունները կիսվելուց միայն %1 վայրկյան հետո։",

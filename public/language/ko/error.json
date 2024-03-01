@@ -63,6 +63,7 @@
     "no-teaser": "존재하지 않는 미리보기입니다.",
     "no-flag": "Flag does not exist",
     "no-privileges": "이 작업을 할 수 있는 권한이 없습니다.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "카테고리가 비활성화 되었습니다.",
     "topic-locked": "게시물이 잠금 상태입니다.",
     "post-edit-duration-expired": "포스트의 수정은 작성한 시간으로부터 %1초 후에 가능합니다.",

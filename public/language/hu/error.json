@@ -63,6 +63,7 @@
     "no-teaser": "A bevezető nem létezik",
     "no-flag": "Flag does not exist",
     "no-privileges": "Nincs elég jogod ehhez a művelethez.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Kategória kikapcsolva",
     "topic-locked": "Téma lezárva",
     "post-edit-duration-expired": "Bejegyzés létrehozását követően csak %1 másodperc elteltével válik szerkeszthetővé",

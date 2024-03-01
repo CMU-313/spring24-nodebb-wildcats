@@ -63,6 +63,7 @@
     "no-teaser": "Predogled ne obstaja.",
     "no-flag": "Flag does not exist",
     "no-privileges": "Nimate dovolj pravic za to dejanje.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Kategorija je onemogočena.",
     "topic-locked": "Tema je zaklenjena.",
     "post-edit-duration-expired": "Urejanje objave je dovoljeno le %1 s po objavi.",

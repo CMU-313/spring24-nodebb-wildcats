@@ -63,6 +63,7 @@
     "no-teaser": "ยังไม่มีทีเซอร์นี้",
     "no-flag": "Flag does not exist",
     "no-privileges": "คุณมีสิทธิ์ไม่เพียงพอที่จะทำรายการนี้",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Category นี้ถูกปิดการใช้งานแล้ว",
     "topic-locked": "กระทู้ถูกล็อก",
     "post-edit-duration-expired": "คุณได้รับอนุญาตให้แก้ไขโพสต์ได้หลังจากโพสต์ไปแล้ว %1  วินาที (s)",

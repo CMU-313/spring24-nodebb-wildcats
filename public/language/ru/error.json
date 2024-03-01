@@ -63,6 +63,7 @@
     "no-teaser": "Такого тизера не существует",
     "no-flag": "Flag does not exist",
     "no-privileges": "У вас недостаточно прав для этого действия.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Категория отключена",
     "topic-locked": "Тема закрыта",
     "post-edit-duration-expired": "Сообщения можно редактировать только в течение %1 с после публикации",

@@ -63,6 +63,7 @@
     "no-teaser": "Përmbledhja nuk ekziston",
     "no-flag": "Flag does not exist",
     "no-privileges": "Nuk keni akses të mjaftueshem për këtë veprim.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Kategori e çaktivizuar",
     "topic-locked": "Temë e kyçur",
     "post-edit-duration-expired": "Ju lejohet të redaktoni postimet vetëm për %1 sekond(a) pas postimit",

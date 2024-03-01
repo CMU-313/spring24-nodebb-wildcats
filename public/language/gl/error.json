@@ -63,6 +63,7 @@
     "no-teaser": "A vista previa do tema non existe",
     "no-flag": "Flag does not exist",
     "no-privileges": "Non tes privilexios dabondo para ver este tema.",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Categoría deshabilitada",
     "topic-locked": "Tema Pechado",
     "post-edit-duration-expired": "Só podes editar as publicacións %1 segundo(s) despois de envialas. ",

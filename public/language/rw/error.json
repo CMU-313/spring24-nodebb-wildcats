@@ -63,6 +63,7 @@
     "no-teaser": "Inshamake itabaho",
     "no-flag": "Flag does not exist",
     "no-privileges": "Ntabwo uragira uburenganzira buhagije ngo wemererwe iki gikorwa",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Icyiciro cyabujijwe",
     "topic-locked": "Ikiganiro Cyafungiranywe",
     "post-edit-duration-expired": "Wemerewe gusa kugira icyo uhindura ku byo washyizeho nyuma y'amasegonda (isegonda) %1 nyuma yo kubishyiraho",

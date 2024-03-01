@@ -63,6 +63,7 @@
     "no-teaser": "Đoạn giới thiệu không tồn tại",
     "no-flag": "Cờ không tồn tại",
     "no-privileges": "Bạn không đủ quyền để thực thi hành động này",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Chuyên mục bị khóa",
     "topic-locked": "Chủ đề bị khóa",
     "post-edit-duration-expired": "Bạn chỉ được phép sửa bài viết sau khi đăng %1 giây.",

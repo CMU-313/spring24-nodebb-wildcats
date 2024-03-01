@@ -63,6 +63,7 @@
     "no-teaser": "Teaser eksisterer ikke",
     "no-flag": "Flag does not exist",
     "no-privileges": "Du har ikke nok rettigheder til at udføre denne handling",
+    "instructor-only": "Your instructor disabled you to post announcements.",
     "category-disabled": "Kategorien er deaktiveret",
     "topic-locked": "Tråden er låst",
     "post-edit-duration-expired": "Du kan kun redigere indlæg i %1 sekund(er) efter indlæg",
