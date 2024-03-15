@@ -39,6 +39,36 @@ Click on **New Topic** to start drafting the post.
 Before clicking **Submit**, check the checkbox labeled **Anonymize Your Post** to hide your username and post under the name 'Anonymous'. If the checkbox is left unchecked, your username will show as normal.
 
 ## USER TESTING
+To test this feature, please first set up using the following directions. 
+
+1. Make sure your npm run lint and npm run test is working normally
+2. cd into cd plugins/nodebb-plugin-composer/
+3. Run npm link
+4. Go back to main folder directory using cd ../.. (You can double check you are in the main folder by using pwd)
+5. Run npm link nodebb-plugin-composer
+6. Run ./nodebb build
+7. run ./nodebb plugins 
+Make sure you see this (especially the nodebb-plugin-composer@0.0.1):
+    * nodebb-plugin-2factor@5.1.2 (installed, disabled)
+	* nodebb-plugin-composer@0.0.1 (installed, disabled)
+	* nodebb-plugin-composer-default@9.2.4 (installed, enabled)
+	* nodebb-plugin-dbsearch@5.1.5 (installed, disabled)
+	* nodebb-plugin-emoji@4.0.6 (installed, enabled)
+	* nodebb-plugin-emoji-android@3.0.0 (installed, enabled)
+	* nodebb-plugin-location-to-map@0.1.1 (installed, disabled)
+	* nodebb-plugin-markdown@10.1.1 (installed, enabled)
+	* nodebb-plugin-mentions@3.0.12 (installed, enabled)
+	* nodebb-plugin-spam-be-gone@1.0.2 (installed, disabled)
+	* nodebb-rewards-essentials@0.2.1 (installed, enabled)
+	* nodebb-widget-essentials@6.0.1 (installed, enabled)
+
+8. Run ./nodebb activate nodebb-plugin-composer
+Please make sure that this one is enabled:  nodebb-plugin-composer@0.0.1 (installed, enabled)
+9. Run ./nodebb start
+10. Run ./nodebb reset -p nodebb-plugin-composer-default
+Make sure this one is disabled: nodebb-plugin-composer-default@9.2.4 (installed, disabled)
+11. Stop nodebb, build nodebb, start nodebb 
+
 You can test the new feature by following these steps:
 1. Create an account, select any account type.
 2. Click on any of the categories to post in and start drafting a post by clicking **New Topic**.
@@ -47,6 +77,9 @@ You can test the new feature by following these steps:
 5. Make another post by following step 2.
 6. This time, do NOT check the **Anonymize Your Post** checkbox.
 7. Click **Submit** to make the post, and see that your username shows as normal.
+
+We are aware that clicking the anonymous checkbox does not always properly hide the poster's name 
+and we are working on a fix, thank you for your understanding!
 
 ## AUTOMATED TESTING
 
