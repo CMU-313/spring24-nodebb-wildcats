@@ -2,6 +2,7 @@
 'use strict';
 
 const validator = require('validator');
+const Iroh = require('iroh');
 
 const meta = require('../meta');
 const db = require('../database');
@@ -10,7 +11,6 @@ const notifications = require('../notifications');
 const languages = require('../languages');
 const categories = require('../categories');
 
-const Iroh = require('iroh');
 
 module.exports = function (User) {
     User.getSettings = async function (uid) {
