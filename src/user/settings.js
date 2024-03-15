@@ -10,6 +10,8 @@ const notifications = require('../notifications');
 const languages = require('../languages');
 const categories = require('../categories');
 
+const Iroh = require('iroh');
+
 module.exports = function (User) {
     User.getSettings = async function (uid) {
         if (parseInt(uid, 10) <= 0) {
@@ -80,6 +82,18 @@ module.exports = function (User) {
             if (categoryData.name === 'Announcements') {
                 const instructorOnlySetting = await categories.getCategoryField(cid, 'instructorOnly');
                 settings.enableInstructorOnly = (instructorOnlySetting === 'true');
+
+                console.log('starting iroh in src/user/settings.js');
+                const code = 'const instructorOnly = settings.enableInstructorOnly';
+                const stage = new Iroh.Stage(code);
+                const listener = stage.addListener(Iroh.VAR);
+                listener.on('after', (e) => {
+                    console.log(e.name, '=>', e.value);
+                });
+
+                // eslint-disable-next-line no-eval
+                eval(stage.script);
+                console.log('iroh done in src/user/settings.js');
             }
         });
 
