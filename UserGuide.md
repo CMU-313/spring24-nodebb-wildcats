@@ -39,6 +39,7 @@ Click on **New Topic** to start drafting the post.
 Before clicking **Submit**, check the checkbox labeled **Anonymize Your Post** to hide your username and post under the name 'Anonymous'. If the checkbox is left unchecked, your username will show as normal.
 
 ## USER TESTING
+
 You can test the new feature by following these steps:
 1. Create an account, select any account type.
 2. Click on any of the categories to post in and start drafting a post by clicking **New Topic**.
