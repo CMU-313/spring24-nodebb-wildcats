@@ -67,8 +67,6 @@ function modifyPost(post, fields) {
         if (post.hasOwnProperty('edited')) {
             post.editedISO = post.edited !== 0 ? utils.toISOString(post.edited) : '';
         }
-        if (post.hasOwnProperty('isAnonymous') && fields === 'getUser') {
-            post.user = 'Anonymous';
-        }
+        post.isEnglish = post.isEnglish == "true";
     }
 }

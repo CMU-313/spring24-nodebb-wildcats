@@ -9,6 +9,7 @@ const topics = require('../topics');
 const categories = require('../categories');
 const groups = require('../groups');
 const utils = require('../utils');
+const translate = require('../translate');
 
 module.exports = function (Posts) {
     Posts.create = async function (data) {
@@ -20,10 +21,8 @@ module.exports = function (Posts) {
         const content = data.content.toString();
         const timestamp = data.timestamp || Date.now();
         const isMain = data.isMain || false;
-        const { isAnonymous } = data || { isAnonymous: false };
-        // const { isAnonymous } = data.isAnonymous;
-        // console.log(`this is anonymous value:${isAnonymous}`);
-        // window.alert("this is anonymous value:"+isAnonymous);
+        const [isEnglish, translatedContent] = await translate.translate(data)
+
         if (!uid && parseInt(uid, 10) !== 0) {
             throw new Error('[[error:invalid-uid]]');
         }
@@ -39,7 +38,6 @@ module.exports = function (Posts) {
             tid: tid,
             content: content,
             timestamp: timestamp,
-            isAnonymous: isAnonymous,
         };
 
         if (data.toPid) {
