@@ -38,5 +38,6 @@ jobs:
     #       - 27017:27017
 
     steps:
+      - run: cp install/package.json package.json
       - name: Run Flow test
         run: npm run flow check --all
