@@ -38,5 +38,5 @@ jobs:
         with:
           useLockFile: false
    
-      - name: Run Flow test
+      - name: Run Flow Test
         run: npm run flow check --all
