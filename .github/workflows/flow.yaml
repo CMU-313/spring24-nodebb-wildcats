@@ -16,7 +16,7 @@ permissions:
   contents: read
 
 jobs:
-  lint:
+  flow-test:
     permissions:
       checks: write  # for coverallsapp/github-action to create new checks
       contents: read  # for actions/checkout to fetch code
@@ -38,5 +38,5 @@ jobs:
           - 27017:27017
 
     steps:
-      - name: Run Flow
+      - name: Run Flow test
         run: npm run flow check --all
