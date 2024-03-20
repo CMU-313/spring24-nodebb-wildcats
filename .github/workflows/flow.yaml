@@ -1,0 +1,42 @@
+name: Flow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  flow-test:
+    permissions:
+      checks: write  # for coverallsapp/github-action to create new checks
+      contents: read  # for actions/checkout to fetch code
+    name: Flow
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        node: [16]
+    runs-on: ${{ matrix.os }}
+    env:
+      TEST_ENV: ${{ matrix.test_env || 'production' }}
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - run: cp install/package.json package.json
+
+      - name: Install Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: NPM Install
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+   
+      - name: Run Flow Test
+        run: npm run flow check --all

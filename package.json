@@ -1,0 +1,15 @@
+{
+  "name": "nodebb",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src/ -d lib/",
+    "prepublishOnly": "yarn run build",
+    "flow": "flow"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.24.0",
+    "@babel/preset-flow": "^7.24.0",
+    "flow-bin": "^0.231.0"
+  }
+}
