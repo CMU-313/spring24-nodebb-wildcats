@@ -11,5 +11,8 @@
     "@babel/core": "^7.24.0",
     "@babel/preset-flow": "^7.24.0",
     "flow-bin": "^0.231.0"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }
