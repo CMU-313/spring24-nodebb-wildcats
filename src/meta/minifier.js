@@ -79,9 +79,9 @@ function forkAction(action) {
         proc.on('message', (message) => {
             freeChild(proc);
 
-            if (message.type === 'error') {
-                return reject(new Error(message.message));
-            }
+            // if (message.type === 'error') {
+            //     return reject(new Error(message.message));
+            // }
 
             if (message.type === 'end') {
                 resolve(message.result);
