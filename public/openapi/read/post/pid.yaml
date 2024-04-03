@@ -37,4 +37,5 @@ get:
               translatedContent:
                 type: string
                 description: 'The translated content of the post'
+                nullable: true
             
