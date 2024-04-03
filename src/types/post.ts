@@ -20,5 +20,5 @@ export type PostObject = {
   isAnonymous: boolean | null;
   replies: number;
   isEnglish: boolean;
-  translatedContent: string;
+  translatedContent: string | null | undefined;
 };
