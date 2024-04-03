@@ -69,8 +69,6 @@ type ComposerData = {
     thumb?: string,
     noscript?: string,
     isAnonymous?: boolean,
-    translatedContent: string,
-    isEnglish?: boolean
 
 }
 
