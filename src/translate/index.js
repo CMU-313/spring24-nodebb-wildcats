@@ -1,5 +1,8 @@
 'use strict';
 
+// eslint-disable-next-line
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+
 const translatorApi = module.exports;
 
 translatorApi.translate = async function (postData) {
