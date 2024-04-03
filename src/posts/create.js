@@ -21,7 +21,7 @@ module.exports = function (Posts) {
         const content = data.content.toString();
         const timestamp = data.timestamp || Date.now();
         const isMain = data.isMain || false;
-        const [isEnglish, translatedContent] = await translate.translate(data)
+        const [isEnglish, translatedContent] = await translate.translate(data);
         const { isAnonymous } = data || { isAnonymous: false };
         // const { isAnonymous } = data.isAnonymous;
         // console.log(`this is anonymous value:${isAnonymous}`);
