@@ -31,4 +31,10 @@ get:
               isAnonymous:
                 type: boolean   # Add the isAnonymous property
                 nullable: true
+              isEnglish:
+                type: boolean   # Add the isAnonymous property
+                nullable: true
+              translatedContent:
+                type: string
+                description: 'The translated content of the post'
             
