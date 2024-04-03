@@ -1,4 +1,4 @@
 reporter: dot # For a more verbose display - spec
-timeout: 25000
+timeout: 250000 # edit for LLM response waiting
 exit: true
 bail: true
