@@ -32,7 +32,7 @@ get:
                 type: boolean   # Add the isAnonymous property
                 nullable: true
               isEnglish:
-                type: boolean   # Add the isAnonymous property
+                type: boolean
                 nullable: true
               translatedContent:
                 type: string
