@@ -13,9 +13,6 @@ const translate = require('../translate');
 
 module.exports = function (Posts) {
     Posts.create = async function (data) {
-        console.log('print if run here');
-        console.log(data);
-        // This is an internal method, consider using Topics.reply instead
         const { uid } = data;
         const { tid } = data;
         const content = data.content.toString();
@@ -28,9 +25,6 @@ module.exports = function (Posts) {
         }
 
         const { isAnonymous } = data || { isAnonymous: false };
-        // const { isAnonymous } = data.isAnonymous;
-        // console.log(`this is anonymous value:${isAnonymous}`);
-        // window.alert("this is anonymous value:"+isAnonymous);
         if (!uid && parseInt(uid, 10) !== 0) {
             throw new Error('[[error:invalid-uid]]');
         }
