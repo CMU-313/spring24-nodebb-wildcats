@@ -22,7 +22,6 @@ module.exports = function (Posts) {
         let translatedContent;
         if (process.env.GITHUB_ACTIONS) {
             // Mock the API call for GitHub Actions workflow
-            console.log("github action...")
             isEnglish = true; // Mock value
             translatedContent = 'Mocked translated content'; // Mock value
         } else {
