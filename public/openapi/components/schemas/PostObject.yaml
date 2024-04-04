@@ -9,6 +9,12 @@ PostObject:
       description: A topic identifier
     content:
       type: string
+    isEnglish:
+      type: boolean
+      nullable: true
+    translatedContent:
+      type: string
+      nullable: true
     uid:
       type: number
       description: A user identifier

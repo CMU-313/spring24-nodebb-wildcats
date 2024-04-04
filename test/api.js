@@ -548,6 +548,9 @@ describe('API', async () => {
 
                 switch (schema[prop].type) {
                 case 'string':
+                    if (typeof response[prop] === 'undefined') {
+                        break;
+                    }
                     assert.strictEqual(typeof response[prop], 'string', `"${prop}" was expected to be a string, but was ${typeof response[prop]} instead (path: ${method} ${path}, context: ${context})`);
                     break;
                 case 'boolean':

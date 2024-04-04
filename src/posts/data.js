@@ -70,5 +70,6 @@ function modifyPost(post, fields) {
         if (post.hasOwnProperty('isAnonymous') && fields === 'getUser') {
             post.user = 'Anonymous';
         }
+        post.isEnglish = post.isEnglish === 'true';
     }
 }

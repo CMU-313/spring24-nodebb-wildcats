@@ -68,7 +68,7 @@ type ComposerData = {
     tags?: string[],
     thumb?: string,
     noscript?: string,
-    isAnonymous?: boolean
+    isAnonymous?: boolean,
 
 }
 

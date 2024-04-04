@@ -19,4 +19,6 @@ export type PostObject = {
   isMainPost: boolean;
   isAnonymous: boolean | null;
   replies: number;
+  isEnglish: boolean;
+  translatedContent: string | null | undefined;
 };

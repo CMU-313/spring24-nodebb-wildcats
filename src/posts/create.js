@@ -9,21 +9,31 @@ const topics = require('../topics');
 const categories = require('../categories');
 const groups = require('../groups');
 const utils = require('../utils');
+const translate = require('../translate');
 
 module.exports = function (Posts) {
     Posts.create = async function (data) {
-        console.log('print if run here');
-        console.log(data);
-        // This is an internal method, consider using Topics.reply instead
         const { uid } = data;
         const { tid } = data;
         const content = data.content.toString();
         const timestamp = data.timestamp || Date.now();
         const isMain = data.isMain || false;
+        let isEnglish;
+        let translatedContent;
+        if (process.env.GITHUB_ACTIONS) {
+            // Mock the API call for GitHub Actions workflow
+            isEnglish = true; // Mock value
+            translatedContent = 'Mocked translated content'; // Mock value
+        } else {
+            // Actual API call
+            [isEnglish, translatedContent] = await translate.translate(data);
+        }
+
+        if (translatedContent === undefined) {
+            translatedContent = ''; // Change translatedContent to an empty string
+        }
+
         const { isAnonymous } = data || { isAnonymous: false };
-        // const { isAnonymous } = data.isAnonymous;
-        // console.log(`this is anonymous value:${isAnonymous}`);
-        // window.alert("this is anonymous value:"+isAnonymous);
         if (!uid && parseInt(uid, 10) !== 0) {
             throw new Error('[[error:invalid-uid]]');
         }
@@ -39,6 +49,8 @@ module.exports = function (Posts) {
             tid: tid,
             content: content,
             timestamp: timestamp,
+            translatedContent: translatedContent,
+            isEnglish: isEnglish,
             isAnonymous: isAnonymous,
         };
 

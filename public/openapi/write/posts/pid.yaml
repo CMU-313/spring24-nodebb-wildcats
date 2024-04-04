@@ -49,6 +49,12 @@ get:
                   isAnonymous:
                     type: boolean
                     nullable: true
+                  isEnglish:
+                    type: boolean
+                    nullable: true
+                  translatedContent:
+                    type: string
+                    nullable: true
                   edited:
                     type: number
                   replies:
